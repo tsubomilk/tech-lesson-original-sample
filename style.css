@@ -1,0 +1,244 @@
+/* ===== Webサイト全体のスタイル ===== */
+/* html */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+html {
+  height: 100%;
+}
+
+/* body */
+body {
+  font-family: 'Zen Old Mincho', serif;
+  height: 100%;
+  color: #696969;
+  margin: 0;
+}
+
+/* h1見出し */
+.header-content h1 {
+  font-size: 90px;/* フォントの大きさ */
+  padding: 20px;/* 内側の余白 */
+  margin: 30px;/* 外側の余白 */
+}
+
+/* ===== ヘッダーのスタイル ===== */
+/* ヘッダーの箱 */
+
+header {
+  background-image: url('img/header.jpg'); /* ここに適切な画像パスを設定 */
+  height: 100vh; /* ビューポートの高さに合わせる */
+  background-size: cover; /* 画像がコンテナをカバーするようにする */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像が繰り返されないようにする */
+}
+
+.navbar {
+  height: 60px;
+  display: flex; /* コンテナ全体をフレックスボックスにする */
+  justify-content: space-between; /* コンテナ内の要素を両端に寄せる */
+  align-items: center; /* アイテムを垂直方向の中心に配置 */
+  padding: 0 20px; /* コンテナの両側に余白を追加 */
+  background-color: #f5f5f5; /* ナビゲーションバーの背景色 */
+}
+
+.container {
+  justify-content: space-between; /* コンテナ内の要素を両端に寄せる */
+  align-items: center;
+  margin: 40px;
+}
+
+.recommend-spot {
+  padding: 30px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex; /* メニュー項目を横並びにする */
+  justify-content: flex-end; /* 項目を右寄せにする */
+}
+
+.navbar-item {
+  margin-left: 20px; /* メニュー項目間の余白を追加 */
+  text-decoration: none; /* リンクの下線を消す */
+  color: #696969; /* リンクの色を設定 */
+  font-size: 16px;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the pseudo-element */
+  text-align: center;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content h1 {
+  color: #ffffff; /* White color for the text */
+  text-shadow: 8px 6px 3px rgba(0, 0, 0, 0.25); /* Text shadow for better readability */
+}
+
+/* わたしのまちセクション */
+.about-my-town {
+  background-color: #ffffee;/* 背景の色 */
+  padding: 30px;
+}
+
+.text-content h1 {
+  font-size: 3em;
+  margin-bottom: 0px;
+}
+
+.text-content h2 {
+  font-size: 1.5em;
+  color: #888;
+  margin-top: 0px;
+  font-family: 'Courgette', cursive;
+}
+
+/* h2見出し */
+.title {
+  font-size: 30px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+.about-my-town p {
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 30px;
+  height: 300px;
+}
+
+.about-my-town img {
+  float: right;/* 画像や箱の回り込み */
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.image-wrapper {
+  width: 45%;
+  display: flex;
+  flex-direction: column; /* Stacks images vertically */
+  align-items: center; /* Center images horizontally */
+  justify-content: center; /* Center images vertically */
+  gap: 20px; /* Adds space between the images */
+  /* Add height if you want to see them centered vertically within a specific height, otherwise, they will be at the top */
+  /* height: 100vh; */ /* Example height that would center the images in the viewport */
+}
+
+.image-port-tower,
+.image-building {
+  max-width: 400px; /* Adjust the width as necessary */
+  height: auto;
+  border-radius: 20px; /* Rounded corners for aesthetics */
+  margin-top: 72px;
+  /* Remove any previously set positioning or z-index properties */
+}
+
+/* おすすめスポットのスタイル */
+.container h1 {
+  font-size: 3em;
+}
+
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.spot {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.spot img {
+  width: 100%;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+.spot h2 {
+  margin: 16px;
+  margin-top: 10px;
+  color: #333;
+  font-family: 'Courgette', cursive;
+}
+
+.spot p {
+  margin: 0 16px 16px;
+  color: #666;
+}
+
+/* ルーレット機能 */
+#roulette {
+  padding: 30px; /* Adds padding around the content */
+  background-color: #D6E2E9;
+}
+
+#roulette-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: auto; /* This will center the roulette wheel horizontally */
+  position: relative;
+  overflow: hidden;
+}
+
+.roulette-contents {
+  display: flex; /* フレックスコンテナを設定 */
+  justify-content: center; /* 中央揃えにする */
+  align-items: center; /* アイテムを垂直方向の中心に揃える */
+}
+
+.button {
+  margin-right: 80px;
+}
+
+.button #spinButton {
+  padding: 10px; /* ボタンの内側の余白を設定 */
+  width: 100px; /* ボタンの幅を設定 */
+  height: 100px; /* ボタンの高さを設定 */
+  border-radius: 50%; /* 角を完全に丸くして円形にする */
+  border: none; /* 枠線を無くす */
+  background-color: #007bff; /* ボタンの背景色 */
+  color: white; /* テキストの色 */
+  font-size: 16px; /* テキストのサイズ */
+  line-height: 50px; /* テキストをボタンの中央に配置 */
+  text-align: center; /* テキストを中央揃えにする */
+  cursor: pointer; /* カーソルをポインターに変更 */
+  display: inline-block; /* インラインブロック要素にする */
+  outline: none; /* フォーカス時のアウトラインを削除 */
+  transition: background-color 0.3s; /* 背景色の変更にアニメーションをつける */
+  overflow: hidden; /* ボタンの外にテキストが溢れないようにする */
+}
+
+.button #spinButton:hover {
+  background-color: #0056b3; /* ホバー時の背景色を変更 */
+}
+
+/* フッター設定 */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 0.8em;
+}
+
